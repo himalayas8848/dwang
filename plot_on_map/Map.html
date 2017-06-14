@@ -1,0 +1,1661 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_843923068b924756b4d3f8fcbfb7be62 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_843923068b924756b4d3f8fcbfb7be62" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_843923068b924756b4d3f8fcbfb7be62 = L.map('map_843923068b924756b4d3f8fcbfb7be62', {
+                                           center:[38.58,-99.09],
+                                           zoom: 5,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_97bb5851aae549ad825751b55e2a8975 = L.tileLayer(
+                'https://{s}.tiles.mapbox.com/v3/mapbox.world-bright/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://www.mapbox.com/m">Mapbox</a> Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_843923068b924756b4d3f8fcbfb7be62);
+
+        
+        
+            
+            var feature_group_d6962c6d7aa04f6fbba9eee453bc2e13 = L.featureGroup(
+                ).addTo(map_843923068b924756b4d3f8fcbfb7be62);
+        
+        
+            
+
+            var marker_431e3d1055bc42018aac735b702b2993 = L.marker(
+                [48.7767982,-121.810997],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_4b1fbe776a284dc1828ccb5c44ca1320 = L.popup({maxWidth: '300'});
+
+            
+                var html_ad13e87809984c1c98bcd2fddee13232 = $('         <div id="html_ad13e87809984c1c98bcd2fddee13232"                 style="width: 100.0%; height: 100.0%;">                 Baker: 3285.0</div>                 ')[0];
+                popup_4b1fbe776a284dc1828ccb5c44ca1320.setContent(html_ad13e87809984c1c98bcd2fddee13232);
+            
+
+            marker_431e3d1055bc42018aac735b702b2993.bindPopup(popup_4b1fbe776a284dc1828ccb5c44ca1320);
+
+            
+        
+        
+            
+
+            var marker_918a180f90034709bce37ee150aafb27 = L.marker(
+                [48.1118011,-121.1110001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_992c8cc689b34bd387038aa872e982d5 = L.popup({maxWidth: '300'});
+
+            
+                var html_5b72abfea4f2448da5cfab32e50664db = $('         <div id="html_5b72abfea4f2448da5cfab32e50664db"                 style="width: 100.0%; height: 100.0%;">                 Glacier Peak: 3213.0</div>                 ')[0];
+                popup_992c8cc689b34bd387038aa872e982d5.setContent(html_5b72abfea4f2448da5cfab32e50664db);
+            
+
+            marker_918a180f90034709bce37ee150aafb27.bindPopup(popup_992c8cc689b34bd387038aa872e982d5);
+
+            
+        
+        
+            
+
+            var marker_ce15f58b947a4bd1a2fa3dea7f223bfb = L.marker(
+                [46.8698006,-121.7509995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_d330b20b0ed44ff7920d0896fe15c570 = L.popup({maxWidth: '300'});
+
+            
+                var html_9142ed0386e94a1d9a4aa8ba9ac63b24 = $('         <div id="html_9142ed0386e94a1d9a4aa8ba9ac63b24"                 style="width: 100.0%; height: 100.0%;">                 Rainier: 4392.0</div>                 ')[0];
+                popup_d330b20b0ed44ff7920d0896fe15c570.setContent(html_9142ed0386e94a1d9a4aa8ba9ac63b24);
+            
+
+            marker_ce15f58b947a4bd1a2fa3dea7f223bfb.bindPopup(popup_d330b20b0ed44ff7920d0896fe15c570);
+
+            
+        
+        
+            
+
+            var marker_5eb0522f6b0a45be97cc31dcabd48fa9 = L.marker(
+                [46.1997986,-122.1809998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_cb47e5b11fa94404b917337fa9155b0b = L.popup({maxWidth: '300'});
+
+            
+                var html_3d45f50343ba4600ba1a0296de8d1008 = $('         <div id="html_3d45f50343ba4600ba1a0296de8d1008"                 style="width: 100.0%; height: 100.0%;">                 St. Helens: 2549.0</div>                 ')[0];
+                popup_cb47e5b11fa94404b917337fa9155b0b.setContent(html_3d45f50343ba4600ba1a0296de8d1008);
+            
+
+            marker_5eb0522f6b0a45be97cc31dcabd48fa9.bindPopup(popup_cb47e5b11fa94404b917337fa9155b0b);
+
+            
+        
+        
+            
+
+            var marker_e94f1d6626f94b48b15ae15b3414539c = L.marker(
+                [46.2057991,-121.4909973],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_1ac531d7e79344baa418b6e2cdc2e08b = L.popup({maxWidth: '300'});
+
+            
+                var html_52b0836927da4a0eb77be821b8816a60 = $('         <div id="html_52b0836927da4a0eb77be821b8816a60"                 style="width: 100.0%; height: 100.0%;">                 Adams: 3742.0</div>                 ')[0];
+                popup_1ac531d7e79344baa418b6e2cdc2e08b.setContent(html_52b0836927da4a0eb77be821b8816a60);
+            
+
+            marker_e94f1d6626f94b48b15ae15b3414539c.bindPopup(popup_1ac531d7e79344baa418b6e2cdc2e08b);
+
+            
+        
+        
+            
+
+            var marker_4fb2186416954d71aebda402eda9d86a = L.marker(
+                [45.8797989,-122.0810013],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_37e533d65a5c4d5e824745ef544ebc0c = L.popup({maxWidth: '300'});
+
+            
+                var html_d47c9ba2b7474c91aed882ce7755b2ad = $('         <div id="html_d47c9ba2b7474c91aed882ce7755b2ad"                 style="width: 100.0%; height: 100.0%;">                 West Crater: 1329.0</div>                 ')[0];
+                popup_37e533d65a5c4d5e824745ef544ebc0c.setContent(html_d47c9ba2b7474c91aed882ce7755b2ad);
+            
+
+            marker_4fb2186416954d71aebda402eda9d86a.bindPopup(popup_37e533d65a5c4d5e824745ef544ebc0c);
+
+            
+        
+        
+            
+
+            var marker_7338495a77a64925af88ccc98c342846 = L.marker(
+                [45.9297981,-121.8209991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_932657bc0b1f42f1bd8996f07128a971 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e95c8766c7748d5a5e5699c59b1628c = $('         <div id="html_9e95c8766c7748d5a5e5699c59b1628c"                 style="width: 100.0%; height: 100.0%;">                 Indian Heaven: 1806.0</div>                 ')[0];
+                popup_932657bc0b1f42f1bd8996f07128a971.setContent(html_9e95c8766c7748d5a5e5699c59b1628c);
+            
+
+            marker_7338495a77a64925af88ccc98c342846.bindPopup(popup_932657bc0b1f42f1bd8996f07128a971);
+
+            
+        
+        
+            
+
+            var marker_7e72237fb22c41ebbe1f6edee95de717 = L.marker(
+                [45.3737984,-121.6910019],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_ad8dac6cba1b45d8a7d9a1bf1afd6341 = L.popup({maxWidth: '300'});
+
+            
+                var html_4c111c174a79465e80c2133078d83004 = $('         <div id="html_4c111c174a79465e80c2133078d83004"                 style="width: 100.0%; height: 100.0%;">                 Hood: 3426.0</div>                 ')[0];
+                popup_ad8dac6cba1b45d8a7d9a1bf1afd6341.setContent(html_4c111c174a79465e80c2133078d83004);
+            
+
+            marker_7e72237fb22c41ebbe1f6edee95de717.bindPopup(popup_ad8dac6cba1b45d8a7d9a1bf1afd6341);
+
+            
+        
+        
+            
+
+            var marker_df4c4180c25c425086dba0f44a266622 = L.marker(
+                [44.6917992,-121.8010025],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_207e213506f24cf8ba2031f9774a5cca = L.popup({maxWidth: '300'});
+
+            
+                var html_a5bd3c10c3914ce19b37ff100fc2a923 = $('         <div id="html_a5bd3c10c3914ce19b37ff100fc2a923"                 style="width: 100.0%; height: 100.0%;">                 Jefferson: 3199.0</div>                 ')[0];
+                popup_207e213506f24cf8ba2031f9774a5cca.setContent(html_a5bd3c10c3914ce19b37ff100fc2a923);
+            
+
+            marker_df4c4180c25c425086dba0f44a266622.bindPopup(popup_207e213506f24cf8ba2031f9774a5cca);
+
+            
+        
+        
+            
+
+            var marker_4bdc55bd528c41c4ba913a282cc7cec5 = L.marker(
+                [44.4197998,-121.7710037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_97def64a6655498a948a7bd5a326ab77 = L.popup({maxWidth: '300'});
+
+            
+                var html_1a2348a21dc44a959996b7bc0347fb57 = $('         <div id="html_1a2348a21dc44a959996b7bc0347fb57"                 style="width: 100.0%; height: 100.0%;">                 Blue Lake Crater: 1230.0</div>                 ')[0];
+                popup_97def64a6655498a948a7bd5a326ab77.setContent(html_1a2348a21dc44a959996b7bc0347fb57);
+            
+
+            marker_4bdc55bd528c41c4ba913a282cc7cec5.bindPopup(popup_97def64a6655498a948a7bd5a326ab77);
+
+            
+        
+        
+            
+
+            var marker_1fcaf963224748fbabee940fdf38a37d = L.marker(
+                [44.3797989,-121.9309998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_2cc38aac089842bea60ed10d5b96c5fb = L.popup({maxWidth: '300'});
+
+            
+                var html_c922b71b16824044a573cf4639188ef6 = $('         <div id="html_c922b71b16824044a573cf4639188ef6"                 style="width: 100.0%; height: 100.0%;">                 Sand Mountain Field: 1664.0</div>                 ')[0];
+                popup_2cc38aac089842bea60ed10d5b96c5fb.setContent(html_c922b71b16824044a573cf4639188ef6);
+            
+
+            marker_1fcaf963224748fbabee940fdf38a37d.bindPopup(popup_2cc38aac089842bea60ed10d5b96c5fb);
+
+            
+        
+        
+            
+
+            var marker_097afee5a3ef44f2941c76ecd13ab530 = L.marker(
+                [44.3317986,-121.8310013],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_45482c0350bc4ab39bf89a8ee2dd790c = L.popup({maxWidth: '300'});
+
+            
+                var html_efad938a05c643a894b437d4ade68a88 = $('         <div id="html_efad938a05c643a894b437d4ade68a88"                 style="width: 100.0%; height: 100.0%;">                 Washington: 2376.0</div>                 ')[0];
+                popup_45482c0350bc4ab39bf89a8ee2dd790c.setContent(html_efad938a05c643a894b437d4ade68a88);
+            
+
+            marker_097afee5a3ef44f2941c76ecd13ab530.bindPopup(popup_45482c0350bc4ab39bf89a8ee2dd790c);
+
+            
+        
+        
+            
+
+            var marker_9743d66e3d074809aa9b36ed2b5fd363 = L.marker(
+                [44.2848015,-121.8410034],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_3ebc3bc9ebb240048761ded7389871b7 = L.popup({maxWidth: '300'});
+
+            
+                var html_a6858fae8de14d23a7b702ff6c06be5b = $('         <div id="html_a6858fae8de14d23a7b702ff6c06be5b"                 style="width: 100.0%; height: 100.0%;">                 Belknap: 2095.0</div>                 ')[0];
+                popup_3ebc3bc9ebb240048761ded7389871b7.setContent(html_a6858fae8de14d23a7b702ff6c06be5b);
+            
+
+            marker_9743d66e3d074809aa9b36ed2b5fd363.bindPopup(popup_3ebc3bc9ebb240048761ded7389871b7);
+
+            
+        
+        
+            
+
+            var marker_7edd5d9dacd043979ff8af2b6902f517 = L.marker(
+                [44.1697998,-121.7710037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_2f4838ae960644c5aca94247f348b663 = L.popup({maxWidth: '300'});
+
+            
+                var html_012f3aec4aca488da1ce1e81664956c6 = $('         <div id="html_012f3aec4aca488da1ce1e81664956c6"                 style="width: 100.0%; height: 100.0%;">                 North Sister Field: 3074.0</div>                 ')[0];
+                popup_2f4838ae960644c5aca94247f348b663.setContent(html_012f3aec4aca488da1ce1e81664956c6);
+            
+
+            marker_7edd5d9dacd043979ff8af2b6902f517.bindPopup(popup_2f4838ae960644c5aca94247f348b663);
+
+            
+        
+        
+            
+
+            var marker_69cb504a4f8943578b7395d36b052b2e = L.marker(
+                [44.0998001,-121.7710037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_75b79185c3f94d40b5665c73d15a01bd = L.popup({maxWidth: '300'});
+
+            
+                var html_d350d2a3677c4787bf238e016360b666 = $('         <div id="html_d350d2a3677c4787bf238e016360b666"                 style="width: 100.0%; height: 100.0%;">                 South Sister: 3157.0</div>                 ')[0];
+                popup_75b79185c3f94d40b5665c73d15a01bd.setContent(html_d350d2a3677c4787bf238e016360b666);
+            
+
+            marker_69cb504a4f8943578b7395d36b052b2e.bindPopup(popup_75b79185c3f94d40b5665c73d15a01bd);
+
+            
+        
+        
+            
+
+            var marker_90f240e4ef74406382670db813d6d402 = L.marker(
+                [43.9788017,-121.6809998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_b730160c00294258ad02a44c49fe421d = L.popup({maxWidth: '300'});
+
+            
+                var html_39c2a48fafc34c9fac9b9bd3e33a9826 = $('         <div id="html_39c2a48fafc34c9fac9b9bd3e33a9826"                 style="width: 100.0%; height: 100.0%;">                 Bachelor: 2763.0</div>                 ')[0];
+                popup_b730160c00294258ad02a44c49fe421d.setContent(html_39c2a48fafc34c9fac9b9bd3e33a9826);
+            
+
+            marker_90f240e4ef74406382670db813d6d402.bindPopup(popup_b730160c00294258ad02a44c49fe421d);
+
+            
+        
+        
+            
+
+            var marker_39bd5f1c24f740e9858b194d48b01d16 = L.marker(
+                [43.7218018,-121.2210007],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_c566f13d841343febd815c518272f14b = L.popup({maxWidth: '300'});
+
+            
+                var html_e67c79d8dfe04fef9686e3f1d9ba1124 = $('         <div id="html_e67c79d8dfe04fef9686e3f1d9ba1124"                 style="width: 100.0%; height: 100.0%;">                 Newberry Volcano: 2434.0</div>                 ')[0];
+                popup_c566f13d841343febd815c518272f14b.setContent(html_e67c79d8dfe04fef9686e3f1d9ba1124);
+            
+
+            marker_39bd5f1c24f740e9858b194d48b01d16.bindPopup(popup_c566f13d841343febd815c518272f14b);
+
+            
+        
+        
+            
+
+            var marker_7e43a4f58f7d480fa3eb4c926b00118e = L.marker(
+                [43.5698013,-121.8209991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_b0d8385060754fad8480fb5411b79da8 = L.popup({maxWidth: '300'});
+
+            
+                var html_98345e60c6604675b5a57aae3064e7f2 = $('         <div id="html_98345e60c6604675b5a57aae3064e7f2"                 style="width: 100.0%; height: 100.0%;">                 Davis Lake: 2163.0</div>                 ')[0];
+                popup_b0d8385060754fad8480fb5411b79da8.setContent(html_98345e60c6604675b5a57aae3064e7f2);
+            
+
+            marker_7e43a4f58f7d480fa3eb4c926b00118e.bindPopup(popup_b0d8385060754fad8480fb5411b79da8);
+
+            
+        
+        
+            
+
+            var marker_6e96cf0e823247cf9bb11a1c7accaba1 = L.marker(
+                [43.5119019,-120.8610001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_701679410dae472fad29f3fde2b11b15 = L.popup({maxWidth: '300'});
+
+            
+                var html_463d9bbe62d441e686899c2ebbf43b55 = $('         <div id="html_463d9bbe62d441e686899c2ebbf43b55"                 style="width: 100.0%; height: 100.0%;">                 Devils Garden: 1698.0</div>                 ')[0];
+                popup_701679410dae472fad29f3fde2b11b15.setContent(html_463d9bbe62d441e686899c2ebbf43b55);
+            
+
+            marker_6e96cf0e823247cf9bb11a1c7accaba1.bindPopup(popup_701679410dae472fad29f3fde2b11b15);
+
+            
+        
+        
+            
+
+            var marker_5426577751e943cab9bd6d358ed7cb16 = L.marker(
+                [43.240799,-122.1009979],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_b9d888c59b6644a3bb6e2bd17d34a93b = L.popup({maxWidth: '300'});
+
+            
+                var html_2149f10dfd8f4541b39d4900e6726585 = $('         <div id="html_2149f10dfd8f4541b39d4900e6726585"                 style="width: 100.0%; height: 100.0%;">                 Cinnamon Butte: 1956.0</div>                 ')[0];
+                popup_b9d888c59b6644a3bb6e2bd17d34a93b.setContent(html_2149f10dfd8f4541b39d4900e6726585);
+            
+
+            marker_5426577751e943cab9bd6d358ed7cb16.bindPopup(popup_b9d888c59b6644a3bb6e2bd17d34a93b);
+
+            
+        
+        
+            
+
+            var marker_a229297663a048d6bf1e16b6922051db = L.marker(
+                [43.4719009,-120.7509995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_8504dcebf7a24b87b90e7f91d892ed8c = L.popup({maxWidth: '300'});
+
+            
+                var html_9de394daa1db45c782d2e71f9ae8a99b = $('         <div id="html_9de394daa1db45c782d2e71f9ae8a99b"                 style="width: 100.0%; height: 100.0%;">                 Squaw Ridge Lava Field: 1711.0</div>                 ')[0];
+                popup_8504dcebf7a24b87b90e7f91d892ed8c.setContent(html_9de394daa1db45c782d2e71f9ae8a99b);
+            
+
+            marker_a229297663a048d6bf1e16b6922051db.bindPopup(popup_8504dcebf7a24b87b90e7f91d892ed8c);
+
+            
+        
+        
+            
+
+            var marker_ae9f149085ff4521a84c572a8fc3d02f = L.marker(
+                [43.3609009,-120.6610031],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_ae845ba19e5c44cba835f71b2a95e77b = L.popup({maxWidth: '300'});
+
+            
+                var html_6980bbfb0ecd45888bb8eb8c56d4c85a = $('         <div id="html_6980bbfb0ecd45888bb8eb8c56d4c85a"                 style="width: 100.0%; height: 100.0%;">                 Four Craters Lava Field: 1501.0</div>                 ')[0];
+                popup_ae845ba19e5c44cba835f71b2a95e77b.setContent(html_6980bbfb0ecd45888bb8eb8c56d4c85a);
+            
+
+            marker_ae9f149085ff4521a84c572a8fc3d02f.bindPopup(popup_ae845ba19e5c44cba835f71b2a95e77b);
+
+            
+        
+        
+            
+
+            var marker_f222590923ed47b8b8a5e5561141ad78 = L.marker(
+                [42.9299011,-122.1210022],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_f1d0b0f590164c4f8005b5b5736a5f12 = L.popup({maxWidth: '300'});
+
+            
+                var html_b50099dfc1814b34a6e62ece7e4f8a5c = $('         <div id="html_b50099dfc1814b34a6e62ece7e4f8a5c"                 style="width: 100.0%; height: 100.0%;">                 Crater Lake: 2487.0</div>                 ')[0];
+                popup_f1d0b0f590164c4f8005b5b5736a5f12.setContent(html_b50099dfc1814b34a6e62ece7e4f8a5c);
+            
+
+            marker_f222590923ed47b8b8a5e5561141ad78.bindPopup(popup_f1d0b0f590164c4f8005b5b5736a5f12);
+
+            
+        
+        
+            
+
+            var marker_88adcea9054a44fb8b7dddaa060cdbb4 = L.marker(
+                [44.4299011,-110.6709976],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_bb8358ba082149f09bec9daa13361583 = L.popup({maxWidth: '300'});
+
+            
+                var html_24d9a48e7f914a2bb49b067d25d345ec = $('         <div id="html_24d9a48e7f914a2bb49b067d25d345ec"                 style="width: 100.0%; height: 100.0%;">                 Yellowstone: 2805.0</div>                 ')[0];
+                popup_bb8358ba082149f09bec9daa13361583.setContent(html_24d9a48e7f914a2bb49b067d25d345ec);
+            
+
+            marker_88adcea9054a44fb8b7dddaa060cdbb4.bindPopup(popup_bb8358ba082149f09bec9daa13361583);
+
+            
+        
+        
+            
+
+            var marker_2bf9d3e803294361a85b70305cc75f35 = L.marker(
+                [43.0998993,-118.7509995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_9119b06936414a278527eabf078e38d7 = L.popup({maxWidth: '300'});
+
+            
+                var html_78533e079961492da952e6eb2d0a3b75 = $('         <div id="html_78533e079961492da952e6eb2d0a3b75"                 style="width: 100.0%; height: 100.0%;">                 Diamond Craters: 1435.0</div>                 ')[0];
+                popup_9119b06936414a278527eabf078e38d7.setContent(html_78533e079961492da952e6eb2d0a3b75);
+            
+
+            marker_2bf9d3e803294361a85b70305cc75f35.bindPopup(popup_9119b06936414a278527eabf078e38d7);
+
+            
+        
+        
+            
+
+            var marker_bd4cfa585e3c41229915a3789df1cff8 = L.marker(
+                [43.1498985,-117.4710007],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_3aeb8d6de6724af4806e3e933afd9d0f = L.popup({maxWidth: '300'});
+
+            
+                var html_4535629bde5848a1aeb7e71acad748e6 = $('         <div id="html_4535629bde5848a1aeb7e71acad748e6"                 style="width: 100.0%; height: 100.0%;">                 Jordan Craters: 1473.0</div>                 ')[0];
+                popup_3aeb8d6de6724af4806e3e933afd9d0f.setContent(html_4535629bde5848a1aeb7e71acad748e6);
+            
+
+            marker_bd4cfa585e3c41229915a3789df1cff8.bindPopup(popup_3aeb8d6de6724af4806e3e933afd9d0f);
+
+            
+        
+        
+            
+
+            var marker_33005a24fd554ac2bcb48867011cf206 = L.marker(
+                [42.9999008,-117.8010025],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_8c6c881149a140268a194c6cc0aa4733 = L.popup({maxWidth: '300'});
+
+            
+                var html_640984754f6040ccbfacb35727abe94d = $('         <div id="html_640984754f6040ccbfacb35727abe94d"                 style="width: 100.0%; height: 100.0%;">                 Saddle Butte: 1700.0</div>                 ')[0];
+                popup_8c6c881149a140268a194c6cc0aa4733.setContent(html_640984754f6040ccbfacb35727abe94d);
+            
+
+            marker_33005a24fd554ac2bcb48867011cf206.bindPopup(popup_8c6c881149a140268a194c6cc0aa4733);
+
+            
+        
+        
+            
+
+            var marker_6df1f235c9d84f9fbf376de512b5d415 = L.marker(
+                [43.419899,-113.5009995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_f826ed9ffc4044e5a77d8e628def9235 = L.popup({maxWidth: '300'});
+
+            
+                var html_a12fb054d8e8435c8aed42f6a75b7e00 = $('         <div id="html_a12fb054d8e8435c8aed42f6a75b7e00"                 style="width: 100.0%; height: 100.0%;">                 Craters of the Moon: 2005.0</div>                 ')[0];
+                popup_f826ed9ffc4044e5a77d8e628def9235.setContent(html_a12fb054d8e8435c8aed42f6a75b7e00);
+            
+
+            marker_6df1f235c9d84f9fbf376de512b5d415.bindPopup(popup_f826ed9ffc4044e5a77d8e628def9235);
+
+            
+        
+        
+            
+
+            var marker_8b26f45a1fcc4cc38b7bbfc64c34f3e5 = L.marker(
+                [43.4999008,-112.4509964],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_d66c3c754b474ca5bc82d4187452e5d2 = L.popup({maxWidth: '300'});
+
+            
+                var html_57f720c0cb4f4956bd1f9d5bedd898a0 = $('         <div id="html_57f720c0cb4f4956bd1f9d5bedd898a0"                 style="width: 100.0%; height: 100.0%;">                 Hell&#39;s Half Acre: 1631.0</div>                 ')[0];
+                popup_d66c3c754b474ca5bc82d4187452e5d2.setContent(html_57f720c0cb4f4956bd1f9d5bedd898a0);
+            
+
+            marker_8b26f45a1fcc4cc38b7bbfc64c34f3e5.bindPopup(popup_d66c3c754b474ca5bc82d4187452e5d2);
+
+            
+        
+        
+            
+
+            var marker_ecf73d142c8b45679544573662b89851 = L.marker(
+                [43.1799011,-114.3509979],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_f58c5c07d380429d95f9915720c91468 = L.popup({maxWidth: '300'});
+
+            
+                var html_07005780395c4a97bdececed334a12fd = $('         <div id="html_07005780395c4a97bdececed334a12fd"                 style="width: 100.0%; height: 100.0%;">                 Shoshone Lava Field: 1478.0</div>                 ')[0];
+                popup_f58c5c07d380429d95f9915720c91468.setContent(html_07005780395c4a97bdececed334a12fd);
+            
+
+            marker_ecf73d142c8b45679544573662b89851.bindPopup(popup_f58c5c07d380429d95f9915720c91468);
+
+            
+        
+        
+            
+
+            var marker_d5d4fce2e9104ccbbc28cff23ed2f1d4 = L.marker(
+                [42.6058998,-117.5810013],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_c3b1b0fdc82f4b0c80c25e7affbf375c = L.popup({maxWidth: '300'});
+
+            
+                var html_2ffa7d6bb83045ffa3d62e16309c0408 = $('         <div id="html_2ffa7d6bb83045ffa3d62e16309c0408"                 style="width: 100.0%; height: 100.0%;">                 Jackies Butte: 1418.0</div>                 ')[0];
+                popup_c3b1b0fdc82f4b0c80c25e7affbf375c.setContent(html_2ffa7d6bb83045ffa3d62e16309c0408);
+            
+
+            marker_d5d4fce2e9104ccbbc28cff23ed2f1d4.bindPopup(popup_c3b1b0fdc82f4b0c80c25e7affbf375c);
+
+            
+        
+        
+            
+
+            var marker_91a6843491ee4108ac00b28b8d646a84 = L.marker(
+                [41.5798988,-121.5709991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_924c0ff7e9104d5a8bdd33d81155790e = L.popup({maxWidth: '300'});
+
+            
+                var html_8892116320634032a6ce49d257f5606d = $('         <div id="html_8892116320634032a6ce49d257f5606d"                 style="width: 100.0%; height: 100.0%;">                 Medicine Lake: 2412.0</div>                 ')[0];
+                popup_924c0ff7e9104d5a8bdd33d81155790e.setContent(html_8892116320634032a6ce49d257f5606d);
+            
+
+            marker_91a6843491ee4108ac00b28b8d646a84.bindPopup(popup_924c0ff7e9104d5a8bdd33d81155790e);
+
+            
+        
+        
+            
+
+            var marker_f1798ea75a334d03b72a5d672343bc21 = L.marker(
+                [42.8799019,-113.2210007],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_989f390b655f42c4ba4679422594ad45 = L.popup({maxWidth: '300'});
+
+            
+                var html_95e6f8de8d904a59a3b005678bff9990 = $('         <div id="html_95e6f8de8d904a59a3b005678bff9990"                 style="width: 100.0%; height: 100.0%;">                 Wapi Lava Field: 1604.0</div>                 ')[0];
+                popup_989f390b655f42c4ba4679422594ad45.setContent(html_95e6f8de8d904a59a3b005678bff9990);
+            
+
+            marker_f1798ea75a334d03b72a5d672343bc21.bindPopup(popup_989f390b655f42c4ba4679422594ad45);
+
+            
+        
+        
+            
+
+            var marker_64e19a13eb9f40ce88298b2a1dff67c9 = L.marker(
+                [41.419899,-122.2009964],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_e2584afb15eb491db6f3e94bfa0db6bd = L.popup({maxWidth: '300'});
+
+            
+                var html_8ed214b1b1ec4e159e478ee03a8bcfb7 = $('         <div id="html_8ed214b1b1ec4e159e478ee03a8bcfb7"                 style="width: 100.0%; height: 100.0%;">                 Shasta: 4317.0</div>                 ')[0];
+                popup_e2584afb15eb491db6f3e94bfa0db6bd.setContent(html_8ed214b1b1ec4e159e478ee03a8bcfb7);
+            
+
+            marker_64e19a13eb9f40ce88298b2a1dff67c9.bindPopup(popup_e2584afb15eb491db6f3e94bfa0db6bd);
+
+            
+        
+        
+            
+
+            var marker_f789bb4782704f78a69047011640529c = L.marker(
+                [41.1778984,-121.4410019],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_5d174449f4c94221be83d876b364af02 = L.popup({maxWidth: '300'});
+
+            
+                var html_79c96fdd2153489ea993208d66f44f03 = $('         <div id="html_79c96fdd2153489ea993208d66f44f03"                 style="width: 100.0%; height: 100.0%;">                 Brushy Butte: 1174.0</div>                 ')[0];
+                popup_5d174449f4c94221be83d876b364af02.setContent(html_79c96fdd2153489ea993208d66f44f03);
+            
+
+            marker_f789bb4782704f78a69047011640529c.bindPopup(popup_5d174449f4c94221be83d876b364af02);
+
+            
+        
+        
+            
+
+            var marker_8ff8c0a12bf5452f80bc8515b296a5c4 = L.marker(
+                [40.9548988,-121.3610001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_7c42f74888a44b4d8641d55ed66a3abe = L.popup({maxWidth: '300'});
+
+            
+                var html_0d61d8263dfb4f948c526f8af5ed65bc = $('         <div id="html_0d61d8263dfb4f948c526f8af5ed65bc"                 style="width: 100.0%; height: 100.0%;">                 Big Cave: 1259.0</div>                 ')[0];
+                popup_7c42f74888a44b4d8641d55ed66a3abe.setContent(html_0d61d8263dfb4f948c526f8af5ed65bc);
+            
+
+            marker_8ff8c0a12bf5452f80bc8515b296a5c4.bindPopup(popup_7c42f74888a44b4d8641d55ed66a3abe);
+
+            
+        
+        
+            
+
+            var marker_90e218f4a76b4c90aa8c49692bf57387 = L.marker(
+                [40.7798996,-121.6009979],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_3c33f5f9b08f41918ff498aad18736ce = L.popup({maxWidth: '300'});
+
+            
+                var html_854de5a9a9794929ba04664d11a76ce2 = $('         <div id="html_854de5a9a9794929ba04664d11a76ce2"                 style="width: 100.0%; height: 100.0%;">                 Twin Buttes: 1631.0</div>                 ')[0];
+                popup_3c33f5f9b08f41918ff498aad18736ce.setContent(html_854de5a9a9794929ba04664d11a76ce2);
+            
+
+            marker_90e218f4a76b4c90aa8c49692bf57387.bindPopup(popup_3c33f5f9b08f41918ff498aad18736ce);
+
+            
+        
+        
+            
+
+            var marker_00da992a2ed948a0b9e850159733938c = L.marker(
+                [40.6799011,-121.5510025],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_ba9b62f28ae54fd6897a63ba7a8eee08 = L.popup({maxWidth: '300'});
+
+            
+                var html_554250f376b84ceb8d88fc19b3855cdf = $('         <div id="html_554250f376b84ceb8d88fc19b3855cdf"                 style="width: 100.0%; height: 100.0%;">                 Tumble Buttes: 2191.0</div>                 ')[0];
+                popup_ba9b62f28ae54fd6897a63ba7a8eee08.setContent(html_554250f376b84ceb8d88fc19b3855cdf);
+            
+
+            marker_00da992a2ed948a0b9e850159733938c.bindPopup(popup_ba9b62f28ae54fd6897a63ba7a8eee08);
+
+            
+        
+        
+            
+
+            var marker_cd4a6ee2697440beb64ae114456e1844 = L.marker(
+                [40.6299019,-120.8310013],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_5ac1578aedff46558a80d1164d8c6d6e = L.popup({maxWidth: '300'});
+
+            
+                var html_43190052b737437a9121834a7b4332ad = $('         <div id="html_43190052b737437a9121834a7b4332ad"                 style="width: 100.0%; height: 100.0%;">                 Eagle Lake Field: 1652.0</div>                 ')[0];
+                popup_5ac1578aedff46558a80d1164d8c6d6e.setContent(html_43190052b737437a9121834a7b4332ad);
+            
+
+            marker_cd4a6ee2697440beb64ae114456e1844.bindPopup(popup_5ac1578aedff46558a80d1164d8c6d6e);
+
+            
+        
+        
+            
+
+            var marker_0ea412940ccb4b338c0b193a268b8d0a = L.marker(
+                [40.4919014,-121.5009995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_cfd73f1caae24625994af8838d0896b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_5854f0ee11a6497b85f68da331354125 = $('         <div id="html_5854f0ee11a6497b85f68da331354125"                 style="width: 100.0%; height: 100.0%;">                 Lassen Volc Center: 3187.0</div>                 ')[0];
+                popup_cfd73f1caae24625994af8838d0896b2.setContent(html_5854f0ee11a6497b85f68da331354125);
+            
+
+            marker_0ea412940ccb4b338c0b193a268b8d0a.bindPopup(popup_cfd73f1caae24625994af8838d0896b2);
+
+            
+        
+        
+            
+
+            var marker_c9ae9f2443b34f759b0f322c5dfae604 = L.marker(
+                [38.9698982,-122.7710037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_52e1a78c074e4bbbbe7bbee2ef1f5c27 = L.popup({maxWidth: '300'});
+
+            
+                var html_4171ec9262ec4c1681bbf87132655b81 = $('         <div id="html_4171ec9262ec4c1681bbf87132655b81"                 style="width: 100.0%; height: 100.0%;">                 Clear Lake: 1439.0</div>                 ')[0];
+                popup_52e1a78c074e4bbbbe7bbee2ef1f5c27.setContent(html_4171ec9262ec4c1681bbf87132655b81);
+            
+
+            marker_c9ae9f2443b34f759b0f322c5dfae604.bindPopup(popup_52e1a78c074e4bbbbe7bbee2ef1f5c27);
+
+            
+        
+        
+            
+
+            var marker_12cc052bee40490cba7869594c1084be = L.marker(
+                [39.3749008,-119.7210007],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_e4587e4e135f4348af57cb3d20c95040 = L.popup({maxWidth: '300'});
+
+            
+                var html_7786d4fca7854fb0b55b946b6a7d2764 = $('         <div id="html_7786d4fca7854fb0b55b946b6a7d2764"                 style="width: 100.0%; height: 100.0%;">                 Steamboat Springs: 1415.0</div>                 ')[0];
+                popup_e4587e4e135f4348af57cb3d20c95040.setContent(html_7786d4fca7854fb0b55b946b6a7d2764);
+            
+
+            marker_12cc052bee40490cba7869594c1084be.bindPopup(popup_e4587e4e135f4348af57cb3d20c95040);
+
+            
+        
+        
+            
+
+            var marker_01c2fe2d98014a5c90a1522cc63ac529 = L.marker(
+                [39.6500015,-107.0309982],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_a630b81623e24390a002137542d45a75 = L.popup({maxWidth: '300'});
+
+            
+                var html_693511e1aea3455799e0b3c732e7442a = $('         <div id="html_693511e1aea3455799e0b3c732e7442a"                 style="width: 100.0%; height: 100.0%;">                 Dotsero: 2230.0</div>                 ')[0];
+                popup_a630b81623e24390a002137542d45a75.setContent(html_693511e1aea3455799e0b3c732e7442a);
+            
+
+            marker_01c2fe2d98014a5c90a1522cc63ac529.bindPopup(popup_a630b81623e24390a002137542d45a75);
+
+            
+        
+        
+            
+
+            var marker_a32bbe80e4fa44a8936fa6f3a4198aac = L.marker(
+                [37.9999008,-119.0309982],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_8298ba0b8a52448e80444b6150779788 = L.popup({maxWidth: '300'});
+
+            
+                var html_5011e3164e22489880d677adcc215b3d = $('         <div id="html_5011e3164e22489880d677adcc215b3d"                 style="width: 100.0%; height: 100.0%;">                 Mono Lake Volc Field: 2121.0</div>                 ')[0];
+                popup_8298ba0b8a52448e80444b6150779788.setContent(html_5011e3164e22489880d677adcc215b3d);
+            
+
+            marker_a32bbe80e4fa44a8936fa6f3a4198aac.bindPopup(popup_8298ba0b8a52448e80444b6150779788);
+
+            
+        
+        
+            
+
+            var marker_f46b79009bd540e081fc5d6850d02261 = L.marker(
+                [38.9700012,-112.5009995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_e2c8fd89aeaf4294ac37b15edd4c21bd = L.popup({maxWidth: '300'});
+
+            
+                var html_8e51827af6d6496d861bcc45e4f48283 = $('         <div id="html_8e51827af6d6496d861bcc45e4f48283"                 style="width: 100.0%; height: 100.0%;">                 Black Rock Desert: 1800.0</div>                 ')[0];
+                popup_e2c8fd89aeaf4294ac37b15edd4c21bd.setContent(html_8e51827af6d6496d861bcc45e4f48283);
+            
+
+            marker_f46b79009bd540e081fc5d6850d02261.bindPopup(popup_e2c8fd89aeaf4294ac37b15edd4c21bd);
+
+            
+        
+        
+            
+
+            var marker_4bdf359051ae4492ba1eaeae30108baf = L.marker(
+                [37.8799019,-119.0009995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_c8f1850d1fef45518b29c70d6885ab4d = L.popup({maxWidth: '300'});
+
+            
+                var html_601f762aedc9412fb50a888215696ede = $('         <div id="html_601f762aedc9412fb50a888215696ede"                 style="width: 100.0%; height: 100.0%;">                 Mono Craters: 2796.0</div>                 ')[0];
+                popup_c8f1850d1fef45518b29c70d6885ab4d.setContent(html_601f762aedc9412fb50a888215696ede);
+            
+
+            marker_4bdf359051ae4492ba1eaeae30108baf.bindPopup(popup_c8f1850d1fef45518b29c70d6885ab4d);
+
+            
+        
+        
+            
+
+            var marker_aa0934dfb21f444582004be898b59613 = L.marker(
+                [37.6918983,-119.0210037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_d6faf3eb5f59485fa7fd34cfd970932d = L.popup({maxWidth: '300'});
+
+            
+                var html_bc7fa10dba38475aafe3e9956c44771c = $('         <div id="html_bc7fa10dba38475aafe3e9956c44771c"                 style="width: 100.0%; height: 100.0%;">                 Inyo Craters: 2629.0</div>                 ')[0];
+                popup_d6faf3eb5f59485fa7fd34cfd970932d.setContent(html_bc7fa10dba38475aafe3e9956c44771c);
+            
+
+            marker_aa0934dfb21f444582004be898b59613.bindPopup(popup_d6faf3eb5f59485fa7fd34cfd970932d);
+
+            
+        
+        
+            
+
+            var marker_b06aa9114b1e4e35b4d6b8c2119634c9 = L.marker(
+                [37.6999016,-118.8710022],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_cd147746957f49548daf36c53a7c492e = L.popup({maxWidth: '300'});
+
+            
+                var html_27b0a40229d64b18863f25f43e12697d = $('         <div id="html_27b0a40229d64b18863f25f43e12697d"                 style="width: 100.0%; height: 100.0%;">                 Long Valley: 3390.0</div>                 ')[0];
+                popup_cd147746957f49548daf36c53a7c492e.setContent(html_27b0a40229d64b18863f25f43e12697d);
+            
+
+            marker_b06aa9114b1e4e35b4d6b8c2119634c9.bindPopup(popup_cd147746957f49548daf36c53a7c492e);
+
+            
+        
+        
+            
+
+            var marker_e41bd723621d4e088a12729f316fb43a = L.marker(
+                [37.5798988,-119.0510025],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_676f0454e8534709a557f77ab95ddff7 = L.popup({maxWidth: '300'});
+
+            
+                var html_57cdccd1a0af41db836156ea321299e7 = $('         <div id="html_57cdccd1a0af41db836156ea321299e7"                 style="width: 100.0%; height: 100.0%;">                 Red Cones: 2748.0</div>                 ')[0];
+                popup_676f0454e8534709a557f77ab95ddff7.setContent(html_57cdccd1a0af41db836156ea321299e7);
+            
+
+            marker_e41bd723621d4e088a12729f316fb43a.bindPopup(popup_676f0454e8534709a557f77ab95ddff7);
+
+            
+        
+        
+            
+
+            var marker_6c9bd03ad414425597125a006218475e = L.marker(
+                [37.0199013,-117.4509964],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_ff7ed5a32aac496a8d04a5a55d99c974 = L.popup({maxWidth: '300'});
+
+            
+                var html_11af3d9e6bdc4297b60da0e927840029 = $('         <div id="html_11af3d9e6bdc4297b60da0e927840029"                 style="width: 100.0%; height: 100.0%;">                 Ubehebe Craters: 752.0</div>                 ')[0];
+                popup_ff7ed5a32aac496a8d04a5a55d99c974.setContent(html_11af3d9e6bdc4297b60da0e927840029);
+            
+
+            marker_6c9bd03ad414425597125a006218475e.bindPopup(popup_ff7ed5a32aac496a8d04a5a55d99c974);
+
+            
+        
+        
+            
+
+            var marker_2d1f330c45354bba96153bba9a2229b1 = L.marker(
+                [37.5800018,-112.6709976],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_adb5374c5f9a48c4b339560407808a03 = L.popup({maxWidth: '300'});
+
+            
+                var html_2c6dbfc5589b4f8aba07cc1525f6d984 = $('         <div id="html_2c6dbfc5589b4f8aba07cc1525f6d984"                 style="width: 100.0%; height: 100.0%;">                 Markagunt Plateau: 2840.0</div>                 ')[0];
+                popup_adb5374c5f9a48c4b339560407808a03.setContent(html_2c6dbfc5589b4f8aba07cc1525f6d984);
+            
+
+            marker_2d1f330c45354bba96153bba9a2229b1.bindPopup(popup_adb5374c5f9a48c4b339560407808a03);
+
+            
+        
+        
+            
+
+            var marker_f647c916a53445f28174620e8c0b5a2f = L.marker(
+                [37.257,-113.6210022],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_a678029413cc47699cdc497b62f116df = L.popup({maxWidth: '300'});
+
+            
+                var html_cba1c69d54ff441ca2aaae35e780c6b6 = $('         <div id="html_cba1c69d54ff441ca2aaae35e780c6b6"                 style="width: 100.0%; height: 100.0%;">                 Santa Clara: 1465.0</div>                 ')[0];
+                popup_a678029413cc47699cdc497b62f116df.setContent(html_cba1c69d54ff441ca2aaae35e780c6b6);
+            
+
+            marker_f647c916a53445f28174620e8c0b5a2f.bindPopup(popup_a678029413cc47699cdc497b62f116df);
+
+            
+        
+        
+            
+
+            var marker_5b8064a510b3490a80386d1e7d8e1f85 = L.marker(
+                [37.3279991,-112.401001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_bb595b0b279545ef91640992d157dae5 = L.popup({maxWidth: '300'});
+
+            
+                var html_848a58394e78472e8d829c8f8c607794 = $('         <div id="html_848a58394e78472e8d829c8f8c607794"                 style="width: 100.0%; height: 100.0%;">                 Bald Knoll: 2135.0</div>                 ')[0];
+                popup_bb595b0b279545ef91640992d157dae5.setContent(html_848a58394e78472e8d829c8f8c607794);
+            
+
+            marker_5b8064a510b3490a80386d1e7d8e1f85.bindPopup(popup_bb595b0b279545ef91640992d157dae5);
+
+            
+        
+        
+            
+
+            var marker_fe13a54165c548faa5b0911ebe0d8788 = L.marker(
+                [36.3578987,-118.3209991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_b7279f674da8435282bb3ac05216b4f4 = L.popup({maxWidth: '300'});
+
+            
+                var html_df907c88bb364325b548ad9167ac75c3 = $('         <div id="html_df907c88bb364325b548ad9167ac75c3"                 style="width: 100.0%; height: 100.0%;">                 Golden Trout Creek: 2886.0</div>                 ')[0];
+                popup_b7279f674da8435282bb3ac05216b4f4.setContent(html_df907c88bb364325b548ad9167ac75c3);
+            
+
+            marker_fe13a54165c548faa5b0911ebe0d8788.bindPopup(popup_b7279f674da8435282bb3ac05216b4f4);
+
+            
+        
+        
+            
+
+            var marker_85cbcc6ce42d4d0c92637bfc1b13ee55 = L.marker(
+                [36.0298996,-117.8209991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_e68e0ce6261c42809ebd05f506319c52 = L.popup({maxWidth: '300'});
+
+            
+                var html_e6dce1c29b7e4dd5a806b9fb340f2688 = $('         <div id="html_e6dce1c29b7e4dd5a806b9fb340f2688"                 style="width: 100.0%; height: 100.0%;">                 Coso Volc Field: 2400.0</div>                 ')[0];
+                popup_e68e0ce6261c42809ebd05f506319c52.setContent(html_e6dce1c29b7e4dd5a806b9fb340f2688);
+            
+
+            marker_85cbcc6ce42d4d0c92637bfc1b13ee55.bindPopup(popup_e68e0ce6261c42809ebd05f506319c52);
+
+            
+        
+        
+            
+
+            var marker_77c84a79ec5341d480e4ce9c7b0422fb = L.marker(
+                [36.3800011,-113.1309967],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_ebed713ae0914190b728866448cf62fb = L.popup({maxWidth: '300'});
+
+            
+                var html_a98dbe41f775424abec2a91fb619be06 = $('         <div id="html_a98dbe41f775424abec2a91fb619be06"                 style="width: 100.0%; height: 100.0%;">                 Uinkaret Field: 1555.0</div>                 ')[0];
+                popup_ebed713ae0914190b728866448cf62fb.setContent(html_a98dbe41f775424abec2a91fb619be06);
+            
+
+            marker_77c84a79ec5341d480e4ce9c7b0422fb.bindPopup(popup_ebed713ae0914190b728866448cf62fb);
+
+            
+        
+        
+            
+
+            var marker_e7ea91eccfa8478191e241c90f79f760 = L.marker(
+                [34.75,-116.6210022],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_e87ee16a55d6447084239d040785f69c = L.popup({maxWidth: '300'});
+
+            
+                var html_03df318c449d47bab639530c5015e969 = $('         <div id="html_03df318c449d47bab639530c5015e969"                 style="width: 100.0%; height: 100.0%;">                 Lavic Lake: 1495.0</div>                 ')[0];
+                popup_e87ee16a55d6447084239d040785f69c.setContent(html_03df318c449d47bab639530c5015e969);
+            
+
+            marker_e7ea91eccfa8478191e241c90f79f760.bindPopup(popup_e87ee16a55d6447084239d040785f69c);
+
+            
+        
+        
+            
+
+            var marker_ed9bdb8e524c4b0ca2df1d858c0114cd = L.marker(
+                [35.8699989,-106.5709991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_839e558ed4da4ee789600651dbf13c82 = L.popup({maxWidth: '300'});
+
+            
+                var html_0aa9389337214948a9b69bb1f8d83a0a = $('         <div id="html_0aa9389337214948a9b69bb1f8d83a0a"                 style="width: 100.0%; height: 100.0%;">                 Valles Caldera: 3430.0</div>                 ')[0];
+                popup_839e558ed4da4ee789600651dbf13c82.setContent(html_0aa9389337214948a9b69bb1f8d83a0a);
+            
+
+            marker_ed9bdb8e524c4b0ca2df1d858c0114cd.bindPopup(popup_839e558ed4da4ee789600651dbf13c82);
+
+            
+        
+        
+            
+
+            var marker_46a057f6935a434890cb3099fb36d17d = L.marker(
+                [35.3699989,-111.5009995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_6476fd759f9346da855c9799547e8a2a = L.popup({maxWidth: '300'});
+
+            
+                var html_f4eb34de65fc48a4b60960f193617d80 = $('         <div id="html_f4eb34de65fc48a4b60960f193617d80"                 style="width: 100.0%; height: 100.0%;">                 Sunset Crater: 2447.0</div>                 ')[0];
+                popup_6476fd759f9346da855c9799547e8a2a.setContent(html_f4eb34de65fc48a4b60960f193617d80);
+            
+
+            marker_46a057f6935a434890cb3099fb36d17d.bindPopup(popup_6476fd759f9346da855c9799547e8a2a);
+
+            
+        
+        
+            
+
+            var marker_300195d6ba9440b9a1a6fdce8b190748 = L.marker(
+                [34.5499992,-115.7809982],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_4028d3c7aa2348aa93267a9c456400de = L.popup({maxWidth: '300'});
+
+            
+                var html_861171561cd24a1d9aa6527a40abaae5 = $('         <div id="html_861171561cd24a1d9aa6527a40abaae5"                 style="width: 100.0%; height: 100.0%;">                 Amboy: 288.0</div>                 ')[0];
+                popup_4028d3c7aa2348aa93267a9c456400de.setContent(html_861171561cd24a1d9aa6527a40abaae5);
+            
+
+            marker_300195d6ba9440b9a1a6fdce8b190748.bindPopup(popup_4028d3c7aa2348aa93267a9c456400de);
+
+            
+        
+        
+            
+
+            var marker_c5792316baeb413f994cf8b264e946c6 = L.marker(
+                [34.7999992,-108.0009995],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_a0b1ea81a577487badde75918ab07c90 = L.popup({maxWidth: '300'});
+
+            
+                var html_eafc75a18daf4977b2182bbb87bfdecc = $('         <div id="html_eafc75a18daf4977b2182bbb87bfdecc"                 style="width: 100.0%; height: 100.0%;">                 Zuni-Bandera: 2550.0</div>                 ')[0];
+                popup_a0b1ea81a577487badde75918ab07c90.setContent(html_eafc75a18daf4977b2182bbb87bfdecc);
+            
+
+            marker_c5792316baeb413f994cf8b264e946c6.bindPopup(popup_a0b1ea81a577487badde75918ab07c90);
+
+            
+        
+        
+            
+
+            var marker_763b8a1bc1fc45128897986502373c2b = L.marker(
+                [33.7801018,-105.9309998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_d6962c6d7aa04f6fbba9eee453bc2e13);
+            
+        
+            
+            var popup_ce1b5e35e71a4d71986206e91ec03d7e = L.popup({maxWidth: '300'});
+
+            
+                var html_e69570cc2a1f4936a09994a20ddd8571 = $('         <div id="html_e69570cc2a1f4936a09994a20ddd8571"                 style="width: 100.0%; height: 100.0%;">                 Carrizozo: 1731.0</div>                 ')[0];
+                popup_ce1b5e35e71a4d71986206e91ec03d7e.setContent(html_e69570cc2a1f4936a09994a20ddd8571);
+            
+
+            marker_763b8a1bc1fc45128897986502373c2b.bindPopup(popup_ce1b5e35e71a4d71986206e91ec03d7e);
+
+            
+        
+        
+        
+        </script>
+        
