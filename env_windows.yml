@@ -80,6 +80,7 @@ dependencies:
   - olefile=0.46=py36_0
   - opencv=3.4.2=py36h40b0b35_0
   - openssl=1.0.2p=hfa6e2cd_0
+  - pandas=0.23.3=-py36h830ac7b_0
   - pandoc=2.2.3.2=0
   - pandocfilters=1.4.2=py36_1
   - parso=0.3.1=py36_0
@@ -138,4 +139,4 @@ dependencies:
   - zope=1.0=py36_1
   - zope.interface=4.5.0=py36hfa6e2cd_0
   - opencv-contrib=3.3.1=py36_1
-prefix: C:\Users\Marcial\Anaconda3\envs\cvcourse_windows
+prefix: C:\Users\web8341\Miniconda3\envs\ds_lab
