@@ -1,0 +1,28 @@
+1.	SQL Database – transaction database. Open transaction server firewall and add ip. In the transaction server, show server setting, Add Client IP, then SAVE.
+2.	Go to database, copy the server name. Do not use above server, using database instead. Use management studio, put the copied server name and using use name and password set up when creating the server login.
+3.	Azure Cloud Shell - lunch a server only. https://shell.azure.com.  > New-AzSqlServer  -ResourceGroupName “name”  -Location “Same location with above” -ServerName “DataWarehouseServer-1” -ServerVersion “12.0” -SqlAdministratorCredentials (Get-Credential)
+4.	Go to the data warehouse server, in Show Firewall Setting, add client ip, turn Allow Access to Azure Service to be ON and SAVE.
+5.	Find out DW server fully qualified Domain Name: in cloud shell or portal.
+6.	SSMS connect DW server.
+7.	Copy transaction database to DW.  In transaction database – Task >> Deploy Database to Azure SQL Database…. In the box, change the schema name. Choose Edition of Microsoft Azure SQL Database to Standard (NEVER USE DATAWAREHOUSE). Use 250GB. S3.
+8.	Delete all foreign keys in a database.  https://social.msdn.microsoft.com/Forums/sqlserver/en-US/730b7082-2ceb-49e2-a052-68e6b2c25bb5/how-to-delete-all-foreign-keys-in-a-database?forum=databasedesign
+while(exists(select 1 from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where CONSTRAINT_TYPE='FOREIGN KEY'))
+begin
+	declare @sql nvarchar(2000)
+	SELECT TOP 1 @sql=('ALTER TABLE ' + TABLE_SCHEMA + '.[' + TABLE_NAME
+	+ '] DROP CONSTRAINT [' + CONSTRAINT_NAME + ']')
+	FROM information_schema.table_constraints
+	WHERE CONSTRAINT_TYPE = 'FOREIGN KEY'
+	exec (@sql)
+end
+9.	In SSMS, create column store index for large face table. Drop 3 indexed in SalesLT.SalesOrderDetail table.  Click SalesLT.SalesOrderDetail table then New Query window. CREATE CLUSTERED COLUMNSTORE INDEX cci ON SalesLT.SalesOrderDetail
+10.	Pipelin: Just name like Data Factory, v2 same region. 
+11.	Go to data factory – Author & Monitor – Edit then connection – In Linked Services click New and Select Azure SQL Database – create linked services. This linked service is from the source table.
+12.	Make sure configure destination data warehouse security, like turn azure access and add ip. 
+13.	Create destination liked services as source.
+14.	Go to Overview, Copy Data tab, click source linked service and select tables. Then click destination linked services and select tables.
+15.	Make mapping. In pre-copy window type in TRUNCATE TABLE SalesLT.TableName.
+16.	Deploy.
+17.	Go to Monitor to see if success.
+18.	Validation.
+19.	Create trigger for schedule. Publish All.
