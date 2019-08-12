@@ -1,0 +1,24 @@
+{
+	"name": "SourceDataset_o5z",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TransactionDataBase",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_table": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SalesLT",
+			"table": {
+				"value": "@dataset().cw_table",
+				"type": "Expression"
+			}
+		}
+	}
+}

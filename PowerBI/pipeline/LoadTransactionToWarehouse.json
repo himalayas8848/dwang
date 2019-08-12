@@ -1,0 +1,304 @@
+{
+	"name": "LoadTransactionToWarehouse",
+	"properties": {
+		"description": "Load data from transaction database to data warehouse",
+		"activities": [
+			{
+				"name": "ForEach_o5z",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.cw_items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_o5z",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource"
+								},
+								"sink": {
+									"type": "AzureSqlSink",
+									"preCopyScript": {
+										"value": "@item().copySink.preCopyScript",
+										"type": "Expression"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"value": "@item().copyActivity.translator",
+									"type": "Expression"
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "SourceDataset_o5z",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_table": "@item().source.table"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DestinationDataset_o5z",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_table": "@item().destination.table"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"cw_items": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"source": {
+							"table": "Customer"
+						},
+						"destination": {
+							"table": "Customer"
+						},
+						"copySink": {
+							"preCopyScript": "TRUNCATE TABLE SalesLT.Customer"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"type": "String",
+											"name": "EmailAddress"
+										},
+										"sink": {
+											"type": "String",
+											"name": "EmailAddress"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "Phone"
+										},
+										"sink": {
+											"type": "String",
+											"name": "Phone"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "PasswordHash"
+										},
+										"sink": {
+											"type": "String",
+											"name": "PasswordHash"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "PasswordSalt"
+										},
+										"sink": {
+											"type": "String",
+											"name": "PasswordSalt"
+										}
+									},
+									{
+										"source": {
+											"type": "Guid",
+											"name": "rowguid"
+										},
+										"sink": {
+											"type": "Guid",
+											"name": "rowguid"
+										}
+									},
+									{
+										"source": {
+											"type": "DateTime",
+											"name": "ModifiedDate"
+										},
+										"sink": {
+											"type": "DateTime",
+											"name": "ModifiedDate"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "FirstName"
+										},
+										"sink": {
+											"type": "String",
+											"name": "FirstName"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "MiddleName"
+										},
+										"sink": {
+											"type": "String",
+											"name": "MiddleName"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "LastName"
+										},
+										"sink": {
+											"type": "String",
+											"name": "LastName"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "Suffix"
+										},
+										"sink": {
+											"type": "String",
+											"name": "Suffix"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "CompanyName"
+										},
+										"sink": {
+											"type": "String",
+											"name": "CompanyName"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "SalesPerson"
+										},
+										"sink": {
+											"type": "String",
+											"name": "SalesPerson"
+										}
+									},
+									{
+										"source": {
+											"type": "Boolean",
+											"name": "NameStyle"
+										},
+										"sink": {
+											"type": "Boolean",
+											"name": "NameStyle"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "Title"
+										},
+										"sink": {
+											"type": "String",
+											"name": "Title"
+										}
+									}
+								]
+							}
+						}
+					},
+					{
+						"source": {
+							"table": "CustomerAddress"
+						},
+						"destination": {
+							"table": "CustomerAddress"
+						},
+						"copySink": {
+							"preCopyScript": "TRUNCATE TABLE SalesLT.CustomerAddress"
+						},
+						"copyActivity": {
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"type": "Int32",
+											"name": "CustomerID"
+										},
+										"sink": {
+											"type": "Int32",
+											"name": "CustomerID"
+										}
+									},
+									{
+										"source": {
+											"type": "Int32",
+											"name": "AddressID"
+										},
+										"sink": {
+											"type": "Int32",
+											"name": "AddressID"
+										}
+									},
+									{
+										"source": {
+											"type": "String",
+											"name": "AddressType"
+										},
+										"sink": {
+											"type": "String",
+											"name": "AddressType"
+										}
+									},
+									{
+										"source": {
+											"type": "Guid",
+											"name": "rowguid"
+										},
+										"sink": {
+											"type": "Guid",
+											"name": "rowguid"
+										}
+									},
+									{
+										"source": {
+											"type": "DateTime",
+											"name": "ModifiedDate"
+										},
+										"sink": {
+											"type": "DateTime",
+											"name": "ModifiedDate"
+										}
+									}
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"annotations": []
+	}
+}
