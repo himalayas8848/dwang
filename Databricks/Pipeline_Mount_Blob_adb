@@ -1,0 +1,50 @@
+# Refer to https://medium.com/@jcbaey/azure-databricks-hands-on-6ed8bed125c7
+/*
+using a WASB file path formatted like this:
+wasbs://<containername>@<accountname>.blob.core.windows.net/<partialPath>
+WASB (Windows Azure Storage Blob) is an extension built on top of the HDFS APIs. HDFS, the Hadoop Distributed File System, is one of the core Hadoop components that manages data and storage on multiple nodes.
+Using a mount point on worker nodes with Databricks FS protocol and request files using a file path like:
+dbfs:/mnt/<containername>/<partialPath>
+using a mount point and request files using a regular file path:
+/dbfs/mnt/<containername>/<partialPath>
+If you are using PySpark functions, you should use 1) or 2). If you are using regular Python IO API, you should use 3).
+*/
+
+container = "container_name"
+storageAccount = "my_storage_account"
+accessKey = "access_key"
+
+accountKey = "fs.azure.account.key.{}.blob.core.windows.net".format(storageAccount)
+
+# Set the credentials to Spark configuration
+spark.conf.set(
+  accountKey,
+  accessKey)
+
+# Set the access key also in SparkContext to be able to access blob in RDD
+# Hadoop configuration options set using spark.conf.set(...) are not accessible via SparkContext..
+# This means that while they are visible to the DataFrame and Dataset API, they are not visible to the RDD API.
+
+spark._jsc.hadoopConfiguration().set(
+  accountKey,
+  accessKey)
+
+# Mount the drive for native python
+inputSource = "wasbs://{}@{}.blob.core.windows.net".format(container, storageAccount)
+mountPoint = "/mnt/" + container
+extraConfig = {accountKey: accessKey}
+
+print("Mounting: {}".format(mountPoint))
+
+try:
+  dbutils.fs.mount(
+    source = inputSource,
+    mount_point = str(mountPoint),
+    extra_configs = extraConfig
+  )
+  print("=> Succeeded")
+except Exception as e:
+  if "Directory already mounted" in str(e):
+    print("=> Directory {} already mounted".format(mountPoint))
+  else:
+    raise(e)
