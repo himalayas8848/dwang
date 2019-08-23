@@ -1,0 +1,9 @@
+%scala
+val tags = com.databricks.logging.AttributionContext.current.tags
+val username = tags.getOrElse(com.databricks.logging.BaseTagDefinitions.TAG_USER, java.util.UUID.randomUUID.toString.replace("-", ""))
+val databaseName   = username.replaceAll("[^a-zA-Z0-9]", "_") + "_db"
+
+spark.sql(s"CREATE DATABASE IF NOT EXISTS `$databaseName`")
+spark.sql(s"USE `$databaseName`")
+
+displayHTML("Created User Database...") // suppress output
